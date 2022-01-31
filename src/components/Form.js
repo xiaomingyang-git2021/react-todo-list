@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Form(props) {
-  const [name, setName] = useState('');
+  const [ name, setName ] = useState('');
 
   function handleChange(e) {
     setName(e.target.value);
@@ -36,4 +36,3 @@ function Form(props) {
 }
 
 export default Form;
-
