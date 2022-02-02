@@ -120,7 +120,7 @@ const listHeadingRef = useRef(null);
           <span className="visually-hidden"> tasks</span>
         </button> */}
       </div>
-      <h2 id="list-heading">
+      <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
         {headingText}
       </h2>
       <ul
