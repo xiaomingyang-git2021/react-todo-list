@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Form from './components/Form';
 import FilterButton from './components/FilterButton';
 import Todo from './components/Todo';
@@ -78,6 +78,8 @@ function addTask(name) {
 
 const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
 const headingText = `${taskList.length} ${tasksNoun} remaining`;
+
+const listHeadingRef = useRef(null);
 
   return (
     <div className="todoapp stack-large">
