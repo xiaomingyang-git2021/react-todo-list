@@ -90,6 +90,12 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;
 const listHeadingRef = useRef(null);
 const prevtaskLength = usePrevious(tasks.length);
 
+useEffect(() => {
+  if (tasks.length - prevtaskLength === -1) {
+    listHeadingRef.current.focus();
+  }
+}, [tasks.length, prevtaskLength]);
+
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
